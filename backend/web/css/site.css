@@ -118,3 +118,47 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+/* menu-item */
+
+.menu-item {
+    /*border-right: 1px solid #eee; */
+    float: left;
+    padding: 15px;
+    color: #fff;
+}
+/* side-bar */
+
+.sidebar-menu > .treeview > .treeview-menu > li > a {
+    font-size: 12px !important;
+}
+
+.active-item {
+    color: #fff !important;
+}
+.menu-item:hover, .menu-item:active, .menu-item:focus, .menu-item-active {
+    color: #fff !important;
+    background-color: #008d4c;
+}
+
+/* side-bar */
+
+.left-side {
+    padding-top: 0 !important;
+}
+.sidebar-menu > .treeview > .treeview-menu > li > a {
+    font-size: 12px !important;
+}
+
+.user-avatar {
+    width:50px;
+    height: 50px;
+    vertical-align:top;
+}
+
+.font_30{
+    font-size: 30px;
+}
+.font_60{
+    font-size: 60px;
+}

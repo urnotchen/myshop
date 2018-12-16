@@ -36,14 +36,10 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['order_use_code', 'order_id', 'goods_id', 'num', 'created_at', 'updated_at'], 'required'],
-            [['goods_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['order_id', 'goods_id', 'name','phone','content','num'], 'required'],
+            [['goods_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time', 'status', 'updated_by','created_at', 'updated_at'], 'integer'],
             [['order_use_code', 'order_id'], 'string', 'max' => 255],
             [['order_use_code'], 'unique'],
-            [['user_id'], 'unique'],
-            [['order_time'], 'unique'],
-            [['pay_time'], 'unique'],
-            [['use_time'], 'unique'],
         ];
     }
 
@@ -59,12 +55,16 @@ class Order extends \yii\db\ActiveRecord
             'goods_id' => 'Goods ID',
             'user_id' => 'User ID',
             'num' => 'Num',
+            'content' => 'content',
+            'phone' => 'phone',
+            'name' => 'name',
             'order_time' => 'Order Time',
             'pay_time' => 'Pay Time',
             'use_time' => 'Use Time',
             'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'updated_by' => 'Updated By',
         ];
     }
 }

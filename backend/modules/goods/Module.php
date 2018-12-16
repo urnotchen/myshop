@@ -22,7 +22,7 @@ class Module extends \yii\base\Module {
         $this->on(\yii\base\Module::EVENT_BEFORE_ACTION, [$this, 'handleSidebarItems']);
 
         \yii\base\Event::on(\yii\web\View::className(), \yii\web\View::EVENT_END_BODY, function($event){
-//            AppAsset::addPageScript($event->sender, '/js/ajaxFileUpload.js');
+            AppAsset::addPageScript($event->sender, '/js/ajaxFileUpload.js');
 //            AppAsset::addPageScript($event->sender, '/js/weibo.js');
 //            AppAsset::addPageScript($event->sender, '/js/moment.js');
 //            AppAsset::addPageCss($event->sender, '/css/weibo.css');
@@ -41,16 +41,17 @@ class Module extends \yii\base\Module {
     protected function getContent()
     {
 
-        $content_accounts = $this->getAccounts( Yii::$app->getRequest()->get('WeibocontentSearch')['account_open_id'], self::CLASS_CONTENT);
+        $content_accounts = [];
 
         return [
-            'label' => '<span class="fa fa-copy (alias)"></span> <span>微博内容</span>',
-            'items' => $content_accounts,
+            'label' => '<span class="fa fa-copy (alias)"></span> <span>商品管理</span>',
+            'items' => [],
+            'url' => ['/goods/goods/index'],
             'options' => [
                 'class' => SidebarActiveWidget::widget([
-                    'activeArr' => ['weibo-content'],
+                    'activeArr' => ['goods'],
                     'activeControllerArr' => [
-                        'weibo-content',
+                        'goods',
                     ],
                 ])
             ],
@@ -61,7 +62,7 @@ class Module extends \yii\base\Module {
 
         $items = Yii::$app->sidebarItems->getItems();
         $items[] = $this->getContent();
-//        $items[] = $this->getTask();
+        $items[] = $this->getAccounts();
 
         Yii::$app->sidebarItems->setItems($items);
 
@@ -69,40 +70,22 @@ class Module extends \yii\base\Module {
     }
 
 
-    protected function getAccounts($account_open_id, $class)
-    {/*{{{*/
-        $idName = WeiboAccount::getSidebarItems($class);
-        $items = [];
+    protected function getAccounts()
+    {
+        return [
+        'label' => '<span class="fa fa-copy (alias)"></span> <span>店家管理</span>',
+        'items' => [],
+        'url' => ['/goods/store/index'],
+        'options' => [
+        'class' => SidebarActiveWidget::widget([
+            'activeArr' => ['store'],
+            'activeControllerArr' => [
+                'store',
+            ],
+        ])
+        ],
+    ];
 
-
-        $model = 'weibo-content';
-
-        foreach ($idName as $id => $name) {
-
-
-            $linkOptions = [];
-            if ( $account_open_id !== null && $id == $account_open_id ) {
-                $linkOptions = ['class' => 'active-item'];
-            }
-            $search = 'WeibocontentSearch[account_open_id]';
-
-            $items[] = [
-                'label' => $name,
-                'url'   => \yii\helpers\Url::to([
-                    "/weibo-task/{$model}",
-                    $search => $id,
-                ]),
-            ];
-
-        }
-
-
-        array_unshift($items, ['label' => '全部', 'url' => Url::to(["/schedule/{$model}/index"]), 'linkOptions' => $linkOptions]);
-
-        if($class)
-            $items[] = ['label' => '垃圾箱' , 'url' => Url::to(["/schedule/task/trashbin"]), 'linkOptions' => $linkOptions];
-
-        return $items;
     }/*}}}*/
 
 }

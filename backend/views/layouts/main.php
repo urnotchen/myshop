@@ -3,78 +3,82 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\assets\AppAsset;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
-AppAsset::register($this);
+if ( in_array(Yii::$app->controller->action->id, ['login', 'error']) && Yii::$app->getUser()->isGuest) :
+
+    echo $this->render('main-login', [
+        'content' => $content
+    ]);
+else :
+
+    // 检查账号状态
+//    if (! Yii::$app->getUser()->checkStatus()) {
+//        Yii::$app->getUser()->logout();
+//
+//        return Yii::$app->controller->redirect(
+//            Yii::$app->getUser()->loginUrl . '?return_url=' . Yii::$app->getRequest()->getAbsoluteUrl()
+//        );
+//    }
+
+    \backend\assets\AppAsset::register($this);
+
+    \dmstr\web\AdminLteAsset::register($this);
+
+    $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@bower/admin-lte/dist');
+
+    $userIdentity = Yii::$app->getUser()->identity;
+
 ?>
-<?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    <?php $this->beginPage() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
+        <head>
+            <meta charset="<?= Yii::$app->charset ?>">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <?= Html::csrfMetaTags() ?>
+            <title><?= Html::encode($this->title) ?></title>
+            <?php $this->head() ?>
+        </head>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</div>
+        <?php
+        $bodyClass = '';
+        if (isset(Yii::$app->params['adminlteSkin'])) {
+            $bodyClass .= ' ' . Yii::$app->params['adminlteSkin'];
+        }
+        ?>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+        <body class="<?= $bodyClass; ?>">
+        <?php $this->beginBody() ?>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+            <div class="wrapper">
+                <?= $this->render('header', [
+                        'directoryAsset' => $directoryAsset,
+                        'userIdentity'   => $userIdentity,
+                    ]
+                ) ?>
 
-<?php $this->endBody() ?>
-</body>
-</html>
-<?php $this->endPage() ?>
+                <div class="row-offcanvas row-offcanvas-left">
+                    <?= $this->render('left', [
+                            'directoryAsset' => $directoryAsset,
+                            'userIdentity'   => $userIdentity,
+                        ]
+                    )
+                    ?>
+
+                    <?= $this->render('content', [
+                            'content'        => $content,
+                            'directoryAsset' => $directoryAsset,
+                            'userIdentity'   => $userIdentity,
+                        ]
+                    ) ?>
+                </div>
+            </div>
+
+        <?php $this->endBody() ?>
+        </body>
+    </html>
+    <?php $this->endPage() ?>
+
+<?php endif; ?>

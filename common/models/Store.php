@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use backend\helpers\NumHelper;
+use common\traits\KVTrait;
 use Yii;
 
 /**
@@ -18,6 +20,8 @@ use Yii;
  */
 class Store extends \yii\db\ActiveRecord
 {
+
+    use KVTrait;
     /**
      * {@inheritdoc}
      */
@@ -32,13 +36,31 @@ class Store extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['stored_id', 'name', 'phone', 'created_at', 'created_by', 'updated_at', 'updated_by'], 'required'],
+            [['name', 'phone','address'], 'required'],
             [['created_at', 'created_by', 'updated_at', 'updated_by'], 'integer'],
-            [['stored_id', 'name', 'phone'], 'string', 'max' => 255],
+            [['name', 'phone','address'], 'string', 'max' => 255],
+            ['stored_id', 'setStoreId','skipOnEmpty' => false,'on' => ['create']],
             [['stored_id'], 'unique'],
         ];
     }
+    public function behaviors()
+    {/*{{{*/
+        return [
+            'timestamp' => \yii\behaviors\TimestampBehavior::className(),
+            'blameable' => \yii\behaviors\BlameableBehavior::className(),
+        ];
+    }/*}}}*/
+    public function setStoreId(){
 
+        $this->stored_id = self::generateUniqueStoreId();
+    }
+
+    public function scenarios()
+    {
+        $scenarios = parent::scenarios();
+        $scenarios['create'] =  ['name', 'phone','address','stored_id'];
+        return $scenarios;
+    }
     /**
      * {@inheritdoc}
      */
@@ -47,12 +69,19 @@ class Store extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'stored_id' => 'Stored ID',
-            'name' => 'Name',
-            'phone' => 'Phone',
+            'name' => '店名',
+            'phone' => '电话',
+            'address' => '地址',
             'created_at' => 'Created At',
             'created_by' => 'Created By',
             'updated_at' => 'Updated At',
             'updated_by' => 'Updated By',
         ];
     }
+
+    public static function generateUniqueStoreId(){
+
+        return NumHelper::randNum(8);
+    }
+
 }

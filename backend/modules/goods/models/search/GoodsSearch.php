@@ -18,8 +18,8 @@ class GoodsSearch extends Goods
     public function rules()
     {
         return [
-            [['id', 'status', 'is_delete', 'sales_begin', 'sales_end', 'stock_num', 'store_id', 'created_at', 'created_by', 'updated_at', 'updated_by', 'sales_num'], 'integer'],
-            [['goods_id', 'name', 'content', 'email'], 'safe'],
+            [['id', 'goods_status', 'sale_status', 'sales_begin', 'sales_end', 'stock_num', 'store_id', 'created_at', 'created_by', 'updated_at', 'updated_by', 'sales_num'], 'integer'],
+            [['goods_id', 'name', 'content'], 'safe'],
             [['distributor_prize', 'sales_initial', 'sales_actual'], 'number'],
         ];
     }
@@ -64,8 +64,8 @@ class GoodsSearch extends Goods
             'distributor_prize' => $this->distributor_prize,
             'sales_initial' => $this->sales_initial,
             'sales_actual' => $this->sales_actual,
-            'status' => $this->status,
-            'is_delete' => $this->is_delete,
+            'goods_status' => $this->goods_status,
+            'sale_status' => $this->sale_status,
             'sales_begin' => $this->sales_begin,
             'sales_end' => $this->sales_end,
             'stock_num' => $this->stock_num,
@@ -79,8 +79,7 @@ class GoodsSearch extends Goods
 
         $query->andFilterWhere(['like', 'goods_id', $this->goods_id])
             ->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'email', $this->email]);
+            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

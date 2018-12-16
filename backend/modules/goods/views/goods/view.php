@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Goods */
+/* @var $model backend\modules\goods\models\Goods */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Goods', 'url' => ['index']];
@@ -35,9 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'distributor_prize',
             'sales_initial',
             'sales_actual',
-            'email:email',
-            'status',
-            'is_delete',
+            'goods_status',
+            'sale_status',
             'sales_begin',
             'sales_end',
             'stock_num',

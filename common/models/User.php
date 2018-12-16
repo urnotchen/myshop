@@ -3,10 +3,14 @@ namespace common\models;
 
 use Yii;
 use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
+use yii\behaviors\TimestampBehavior;
+use yii\behaviors\BlameableBehavior;
+
+use common\traits\KVTrait;
+use common\traits\EnumTrait;
 /**
  * User model
  *
@@ -23,9 +27,13 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
+    use KVTrait,EnumTrait;
 
+    const STATUS_ACTIVE = 1, STATUS_INACTIVE = 0;
+
+    const PT_ACTIVE = 1, PT_INACTIVE = 0;
+
+    const SCENARIO_PASSWORD = 'password';
 
     /**
      * {@inheritdoc}
@@ -35,27 +43,68 @@ class User extends ActiveRecord implements IdentityInterface
         return '{{%user}}';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function behaviors()
-    {
+    {/*{{{*/
         return [
-            TimestampBehavior::className(),
-        ];
-    }
+            'timestamp' => TimestampBehavior::className(),
+//            'blameable' => BlameableBehavior::className(),
 
-    /**
-     * {@inheritdoc}
-     */
+            'authKey' => [
+                'class' => \yii\behaviors\AttributeBehavior::className(),
+                'attributes' => [
+                    \yii\db\ActiveRecord::EVENT_BEFORE_INSERT => 'auth_key',
+                ],
+                'value' => function ($event) {
+                    return \Yii::$app->getSecurity()->generateRandomString();
+                }
+            ],
+        ];
+    }/*}}}*/
+
+
     public function rules()
-    {
+    {/*{{{*/
         return [
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
-        ];
-    }
 
+            [['username', 'email'], 'required', 'on' => 'default'],
+            [['username', 'email', 'password_hash'], 'required', 'on' => 'create'],
+            [['password_hash'], 'required', 'on' => 'resetPassword'],
+            [['email'], 'required', 'on' => 'requestResetPassword'],
+            [['password_hash'], 'required', 'on' => [self::SCENARIO_PASSWORD]],
+
+            [['status'], 'integer'],
+            [['username', 'email',  'password_hash', 'auth_key', 'password_reset_token'], 'string', 'max' => 255],
+
+            ['email', 'email'],
+            [['username', 'email'], 'unique'],
+            ['status', 'default', 'value' => self::STATUS_ACTIVE],
+            ['password_hash', 'hashPassword'],
+
+        ];
+    }/*}}}*/
+    public function hashPassword($attr, $options)
+    {/*{{{*/
+        $this->password_hash = Yii::$app->getSecurity()->generatePasswordHash($this->$attr);
+    }/*}}}*/
+
+    public function scenarios()
+    {/*{{{*/
+        return [
+            # 普通修改
+            'default' => [
+                'username', 'email', 'status',
+            ],
+            # 创建用户
+            'create' => [
+                'username', 'status','password_hash',
+            ],
+            # 重置密码
+            'resetPassword' => ['password_hash'],
+            # 请求重置密码
+            'requestResetPassword' => ['email'],
+            self::SCENARIO_PASSWORD => ['password_hash'],
+        ];
+    }/*}}}*/
     /**
      * {@inheritdoc}
      */

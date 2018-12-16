@@ -44,6 +44,22 @@ return [
             ],
         ],
         */
+        'urlManager' => [
+            'enablePrettyUrl'     => true,
+            'enableStrictParsing' => true,
+            'showScriptName'      => false,
+            'rules' => [
+
+                '' => 'site/index',
+
+                'v1' => 'v1',
+                'v1/<controller:[a-z-]+>/<action:[a-z-]+>' => 'v1/<controller>/<action>',
+
+                '<controller:[a-z-]+>/<action:[a-z-]+>' => '<controller>/<action>',
+
+            ],
+        ],
     ],
+
     'params' => $params,
 ];

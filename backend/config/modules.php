@@ -14,7 +14,21 @@ return [
          ],
     ],
     'settings' => [
-        'class' => 'app\modules\settings\Module',
+        'class' => 'backend\modules\settings\Module',
+         'as access' => [
+             'class' => \yii\filters\AccessControl::className(),
+             'rules' => [
+                 [
+                     'allow' => true,
+                     'roles' => ['?'],
+                 ],
+             ],
+//             'denyCallback' => ['\app\components\DenyHandler', 'redirect'],
+         ],
+    ],
+
+    'order' => [
+        'class' => 'backend\modules\order\Module',
          'as access' => [
              'class' => \yii\filters\AccessControl::className(),
              'rules' => [
@@ -23,16 +37,13 @@ return [
                      'roles' => ['@'],
                  ],
              ],
-             'denyCallback' => ['\app\components\DenyHandler', 'redirect'],
+//             'denyCallback' => ['\app\components\DenyHandler', 'redirect'],
          ],
     ],
 
-        'user' => [
-            'class' => 'dektrium\user\Module',
-            'confirmWithin' => 21600,
-            'cost' => 12,
-            'admins' => ['admin'],
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
-        ],
+    'admin' => [
+        'class' => 'mdm\admin\Module',
+        'layout' => 'left-menu',//yii2-admin的导航菜单
+    ]
 
 ];

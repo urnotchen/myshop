@@ -3,8 +3,7 @@ $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
     require __DIR__ . '/params.php',
-    require __DIR__ . '/params-local.php',
-    require __DIR__ . '/modules.php'
+    require __DIR__ . '/params-local.php'
 );
 
 return [
@@ -12,21 +11,16 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => require(__DIR__ . '/modules.php'),
+    'language' => 'zh-CN',
+    'name' => '分销系统',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
-//        'user' => [
-//            'identityClass' => 'dektrium\user\Module',
-//            'enableAutoLogin' => true,
-//            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
-//        ],
         'user' => [
-            'class' => 'dektrium\user\Module',
-            'confirmWithin' => 21600,
-            'cost' => 12,
-            'admins' => ['admin'],
+            'identityClass' => 'common\models\User',
+            'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
@@ -71,7 +65,35 @@ return [
 
             ],
         ],
-
+        'as access' => [
+            'class' => 'mdm\admin\components\AccessControl',
+            'allowActions' => [
+                'site/*',//允许访问的节点，可自行添加
+                'admin/*',//允许所有人访问admin节点及其子节点
+            ]
+        ],
+        'sidebarItems' => [
+            'class' => 'common\widgets\SidebarItems',
+        ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@app/themes/adminlte'
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'forceCopy' => false,
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'css' => [
+                        '/css/AdminLTE.min.css',
+                    ],
+                ],
+            ],
+        ],
     ],
+
     'params' => $params,
 ];
