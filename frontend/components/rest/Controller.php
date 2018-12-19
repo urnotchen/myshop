@@ -1,8 +1,8 @@
 <?php
 
 namespace frontend\components\rest;
-use common\models\User;
-use common\services\StatisticsService;
+use common\models\FUser;
+//use common\services\StatisticsService;
 use yii\base\Exception;
 
 
@@ -37,14 +37,14 @@ class Controller extends \yii\rest\Controller
     {
         $user =  \Yii::$app->user->identity;
 
-        User::updateLastUseTime($user->id);
-        try {
-            $this->statisticsService->setAU(time(), $user->id);
-        }catch( \yii\db\Exception $e){
-            //如果redis缓存有问题 就忽略 不能影响其他部分
+//        User::updateLastUseTime($user->id);
+//        try {
+//            $this->statisticsService->setAU(time(), $user->id);
+//        }catch( \yii\db\Exception $e){
+//            如果redis缓存有问题 就忽略 不能影响其他部分
 //            $this->statisticsService = null;
-
-        }
+//
+//        }
         return $user;
     }
 

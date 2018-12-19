@@ -4,11 +4,6 @@ namespace frontend\components\validators;
 
 use common\components\ValidateErrorCode;
 
-/**
- * RequiredValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 10:49
- */
 class RequiredValidator extends \yii\validators\RequiredValidator
 {
 

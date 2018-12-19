@@ -2,8 +2,9 @@
 
 namespace common\models;
 
-use backend\helpers\NumHelper;
+use common\helpers\NumHelper;
 use common\traits\EnumTrait;
+use common\traits\FindOrExceptionTrait;
 use Faker\Provider\Uuid;
 use Yii;
 
@@ -30,7 +31,7 @@ use Yii;
  */
 class Goods extends \yii\db\ActiveRecord
 {
-    use EnumTrait;
+    use EnumTrait,FindOrExceptionTrait;
 
     const SEPARATOR = '~';
 
@@ -60,11 +61,11 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'content', 'sales_initial', 'sales_actual',  'stock_num', 'store_id'], 'required'],
+            [['name', 'content', 'max_num','sales_initial', 'sales_actual',  'stock_num', 'store_id'], 'required'],
             ['goods_id','setGoodsId','skipOnEmpty' => false,'on' => ['create']],
             [['content','image_url'], 'string'],
             [['distributor_prize', 'sales_initial', 'sales_actual'], 'number','min' => 0],
-            [['goods_status', 'sale_status', 'sales_begin', 'sales_end', 'stock_num', 'store_id', 'created_at', 'created_by', 'updated_at', 'updated_by'], 'integer'],
+            [['goods_status', 'sale_status','max_num', 'sales_begin', 'sales_end', 'stock_num', 'store_id', 'created_at', 'created_by', 'updated_at', 'updated_by'], 'integer'],
             [['goods_id', 'name'], 'string', 'max' => 255],
             ['sales_begin_end','validateRange'],
             [['goods_id'], 'unique'],

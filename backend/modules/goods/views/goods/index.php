@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'sales_begin',
                 'format'=>'raw',
                 'value' => function(\backend\modules\goods\models\Goods $model){
-                    return \backend\helpers\DateHelper::timestampToDRP($model->sales_begin,$model->sales_end);
+                    return \common\helpers\DateHelper::timestampToDRP($model->sales_begin,$model->sales_end);
                 },
 //                'options' =>  ],
             ],
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'sales_begin',
                 'format'=>'raw',
                 'value' => function(\backend\modules\goods\models\Goods $model){
-                    return \backend\helpers\DateHelper::timestampToDRP($model->sales_begin,$model->sales_end);
+                    return \common\helpers\DateHelper::timestampToDRP($model->sales_begin,$model->sales_end);
                 },
 //                'options' =>  ],
             ],

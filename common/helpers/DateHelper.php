@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\helpers;
+namespace common\helpers;
 
 use yii\base\BaseObject;
 

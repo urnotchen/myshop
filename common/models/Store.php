@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use backend\helpers\NumHelper;
+use common\helpers\NumHelper;
 use common\traits\KVTrait;
 use Yii;
 

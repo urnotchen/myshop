@@ -48,7 +48,6 @@ class SiteController extends Controller
             ],
         ];
     }
-
     /**
      * {@inheritdoc}
      */
@@ -61,6 +60,9 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+            'api-error' => [
+                'class' => 'frontend\components\rest\ErrorAction',
             ],
         ];
     }

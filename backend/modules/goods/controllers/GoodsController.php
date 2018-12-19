@@ -2,7 +2,7 @@
 
 namespace backend\modules\goods\controllers;
 
-use backend\helpers\DateHelper;
+use common\helpers\DateHelper;
 use backend\modules\goods\actions\Upload;
 use backend\modules\goods\models\form\GoodsDetailsForm;
 use backend\modules\goods\models\form\UploadForm;

@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use common\traits\SaveExceptionTrait;
 use Yii;
 
 /**
@@ -22,6 +23,20 @@ use Yii;
  */
 class Order extends \yii\db\ActiveRecord
 {
+    use SaveExceptionTrait;
+
+    //付款状态 待付,已付,付款超时
+    const PAY_STATUS_WAIT_PAY = 1,PAY_STATUS_PAYED = 2,PAY_STATUS_TIMEOUT = 3;
+
+    //订单状态 无效 订单取消 未使用 已使用
+    const ORDER_STATUS_NOT_EFFECT = 1,ORDER_STATUS_CANCEL = 2,ORDER_STATUS_NOT_USE = 3,ORDER_STATUS_USED = 4;
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => \yii\behaviors\TimestampBehavior::className(),
+        ];
+    }
     /**
      * {@inheritdoc}
      */
@@ -36,8 +51,8 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['order_id', 'goods_id', 'name','phone','content','num'], 'required'],
-            [['goods_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time', 'status', 'updated_by','created_at', 'updated_at'], 'integer'],
+            [['order_id', 'goods_id', 'name','phone','num','pay_status', 'order_status'], 'required'],
+            [['goods_id','total_amount','payment_amount','distribution_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time','pay_status', 'order_status', 'updated_by','created_at', 'updated_at'], 'integer'],
             [['order_use_code', 'order_id'], 'string', 'max' => 255],
             [['order_use_code'], 'unique'],
         ];
@@ -67,4 +82,5 @@ class Order extends \yii\db\ActiveRecord
             'updated_by' => 'Updated By',
         ];
     }
+
 }
