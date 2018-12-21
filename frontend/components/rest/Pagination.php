@@ -4,12 +4,7 @@ namespace frontend\components\rest;
 
 use Yii;
 
-/**
- * Pagination class file.
- *
- * @Author haoliang
- * @Date 28.01.2016 16:15
- */
+
 class Pagination extends \yii\data\Pagination
 {
 

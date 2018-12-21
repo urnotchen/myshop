@@ -2,6 +2,8 @@
 
 namespace common\models;
 
+use backend\behaviors\AutoChangeDistributionStatusBehavior;
+use common\traits\FindOrExceptionTrait;
 use common\traits\SaveExceptionTrait;
 use Yii;
 
@@ -24,6 +26,7 @@ use Yii;
 class Order extends \yii\db\ActiveRecord
 {
     use SaveExceptionTrait;
+    use FindOrExceptionTrait;
 
     //付款状态 待付,已付,付款超时
     const PAY_STATUS_WAIT_PAY = 1,PAY_STATUS_PAYED = 2,PAY_STATUS_TIMEOUT = 3;
@@ -35,6 +38,10 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             'timestamp' => \yii\behaviors\TimestampBehavior::className(),
+            'auto_change_distribution_status' => [
+                'class' => AutoChangeDistributionStatusBehavior::className(),
+                'order' => $this
+            ]
         ];
     }
     /**
@@ -52,8 +59,9 @@ class Order extends \yii\db\ActiveRecord
     {
         return [
             [['order_id', 'goods_id', 'name','phone','num','pay_status', 'order_status'], 'required'],
-            [['goods_id','total_amount','payment_amount','distribution_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time','pay_status', 'order_status', 'updated_by','created_at', 'updated_at'], 'integer'],
-            [['order_use_code', 'order_id'], 'string', 'max' => 255],
+            [['goods_id','distributor_id','distribution_id', 'user_id', 'num', 'order_time', 'pay_time', 'use_time','pay_status', 'order_status', 'updated_by','created_at', 'updated_at'], 'integer'],
+            [['order_use_code','content', 'order_id'], 'string', 'max' => 255],
+            [['total_amount','payment_amount'],'number'],
             [['order_use_code'], 'unique'],
         ];
     }
@@ -82,5 +90,8 @@ class Order extends \yii\db\ActiveRecord
             'updated_by' => 'Updated By',
         ];
     }
+    public function getGoods(){
 
+        return $this->hasOne(Goods::className(),['id' => 'goods_id']);
+    }
 }

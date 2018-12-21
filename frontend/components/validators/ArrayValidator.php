@@ -4,11 +4,6 @@ namespace frontend\components\validators;
 
 use common\components\ValidateErrorCode;
 
-/**
- * ArrayValidator class file.
- * @Author haoliang
- * @Date 10.05.2016 20:33
- */
 class ArrayValidator extends \yii\validators\Validator
 {
 

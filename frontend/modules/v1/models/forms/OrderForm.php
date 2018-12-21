@@ -22,6 +22,7 @@ class OrderForm extends Model {
             [['num','phone'],'integer'],
             [['total_amount','payment_amount'],'number'],
             [['name','content'],'string'],
+            ['phone','match','pattern'=>'/^[1][34578][0-9]{9}$/'],
         ];
     }
 
@@ -39,10 +40,9 @@ class OrderForm extends Model {
      * 验证订单总价
      * */
     public function validateOrderPrice(){
-
         //根据数量和单价进行判断
         //查找到商品
-        $goods = Goods::findOneOrException(['id' => $this->goods_id]);
+        $goods = Goods::findOneOrException(['goods_id' => $this->goods_id]);
         //总量和价格不符
         if($goods->sales_actual * $this->num != $this->payment_amount){
             throw new HttpException(403, '订单总价不符', ResponseCode::ORDER_PARAMS_ERROR);
@@ -58,7 +58,7 @@ class OrderForm extends Model {
 
         //校验用户商品购买限额
         $user_id = \Yii::$app->getUser()->id;
-        if((Order::getGoodsNum($user_id,$this->goods_id) > $goods->max_num) || ($goods->max_num < $this->num)){
+        if((Order::getGoodsNum($user_id,$goods) + $this->num) > $goods->max_num){
             throw new HttpException(403,'已超过最大购买限额',ResponseCode::ORDER_GOODS_NOT_ENOUGH);
         }
     }

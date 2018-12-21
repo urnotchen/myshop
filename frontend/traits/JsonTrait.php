@@ -2,11 +2,6 @@
 
 namespace frontend\traits;
 
-/**
- * JsonTrait trait file.
- * @Author haoliang
- * @Date 25.05.2016 11:45
- */
 trait JsonTrait
 {
 

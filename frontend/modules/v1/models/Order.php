@@ -9,6 +9,32 @@ use common\helpers\NumHelper;
 
 class Order extends \frontend\models\Order{
 
+
+    public function fields()
+    {
+        return [
+            'id',
+            'order_id',
+            'order_time',
+            'phone',
+            'name',
+            'content',
+            'total_amount',
+            'payment_amount',
+            'pay_time',
+            'order_status',
+            'pay_status',
+            'title' => function($model){
+                return $model->goods->name;
+            },
+            'goods_id' => function($model){
+                return $model->goods->goods_id;
+            }
+        ];
+    }
+
+
+
     /*
      * 创建订单
      *
@@ -18,6 +44,7 @@ class Order extends \frontend\models\Order{
         $model = new self();
         $model->setAttributes([
             'order_id' => self::generateUniqueOrderId(),
+            'order_use_code' => self::generateUniqueOrderUseId(),
             'user_id' => $user_id,
             'total_amount' => $rawParams['total_amount'],
             'payment_amount' => $rawParams['payment_amount'],
@@ -30,9 +57,9 @@ class Order extends \frontend\models\Order{
             'order_status' => self::ORDER_STATUS_NOT_EFFECT,
             'order_time' => time(),
         ]);
-        var_dump($model->save());die;
-        if($model->save()){echo 1;die;
-            return $model->attributes['id'];
+
+        if($model->save()){
+            return $model;
         }
 
         throw new HttpException(403,'订单参数有误',ResponseCode::ORDER_PARAMS_ERROR);
@@ -50,8 +77,45 @@ class Order extends \frontend\models\Order{
             ->count();
     }
 
+    /*
+     * 用户取消订单
+     * */
+    public static function cancelOrder(Order $model){
+        if($model->order_status == self::ORDER_STATUS_NOT_EFFECT) {
+            $model->order_status = self::ORDER_STATUS_CANCEL;
+            $model->save();
+        }else{
+            throw new HttpException(403,'订单状态有误',ResponseCode::ORDER_STATUS_NOT_CORRECT);
+        }
+        return $model;
+    }
+
+    /*
+     * 用户成功支付订单
+     * */
+    public static function payOrder(Order $model){
+
+        $model->order_status = self::ORDER_STATUS_NOT_USE;
+        $model->pay_status = self::PAY_STATUS_PAYED;
+        $model->pay_time = time();
+        $model->save();
+        return $model;
+    }
+
+    /*
+     * 生成订单号
+     * */
     public static function generateUniqueOrderId(){
 
         return NumHelper::randNum(14);
     }
+
+    /*
+     * 生成订单使用码
+     * */
+    public static function generateUniqueOrderUseId(){
+
+        return NumHelper::randNum(10);
+    }
+
 }

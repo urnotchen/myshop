@@ -5,11 +5,6 @@ namespace frontend\components\validators;
 use yii\base\InvalidConfigException;
 use common\components\ValidateErrorCode;
 
-/**
- * RangeValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 12:01
- */
 class RangeValidator extends \yii\validators\RangeValidator
 {
     public function init()

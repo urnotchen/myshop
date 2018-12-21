@@ -5,11 +5,6 @@ namespace frontend\components\validators;
 use yii\base\InvalidConfigException;
 use common\components\ValidateErrorCode;
 
-/**
- * IpValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 12:07
- */
 class IpValidator extends \yii\validators\IpValidator
 {
     public function init()

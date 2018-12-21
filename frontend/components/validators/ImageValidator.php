@@ -4,11 +4,7 @@ namespace frontend\components\validators;
 
 use common\components\ValidateErrorCode;
 
-/**
- * ImageValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 11:56
- */
+
 class ImageValidator extends \yii\validators\ImageValidator
 {
     public function init()

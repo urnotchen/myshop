@@ -9,8 +9,6 @@ use frontend\components\rest\ARExpand;
 
 /**
  * TimelineModel class file.
- * @Author haoliang
- * @Date 
  *
  /**
   * @brief timeline

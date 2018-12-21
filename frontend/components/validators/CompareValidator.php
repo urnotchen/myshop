@@ -5,11 +5,7 @@ namespace frontend\components\validators;
 use yii\base\InvalidConfigException;
 use common\components\ValidateErrorCode;
 
-/**
- * CompareValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 11:20
- */
+
 class CompareValidator extends \yii\validators\CompareValidator
 {
     public function init()

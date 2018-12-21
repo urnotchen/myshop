@@ -5,11 +5,6 @@ namespace frontend\components\validators;
 use yii\base\InvalidConfigException;
 use common\components\ValidateErrorCode;
 
-/**
- * DateValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 11:38
- */
 class DateValidator extends \yii\validators\DateValidator
 {
     public function init()

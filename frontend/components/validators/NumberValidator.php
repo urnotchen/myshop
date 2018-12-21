@@ -4,11 +4,7 @@ namespace frontend\components\validators;
 
 use common\components\ValidateErrorCode;
 
-/**
- * NumberValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 11:43
- */
+
 class NumberValidator extends \yii\validators\NumberValidator
 {
 

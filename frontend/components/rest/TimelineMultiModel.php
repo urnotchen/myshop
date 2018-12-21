@@ -11,8 +11,6 @@ use yii\db\Query;
 
 /**
  * TimelineModel class file.
- * @Author haoliang
- * @Date
  *
 /**
  * @brief timeline

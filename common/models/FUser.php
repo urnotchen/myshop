@@ -3,6 +3,7 @@
 namespace common\models;
 
 use common\traits\EnumTrait;
+use common\traits\FindOrExceptionTrait;
 use Yii;
 
 /**
@@ -22,7 +23,7 @@ use Yii;
 class FUser extends \yii\db\ActiveRecord
 {
 
-    use EnumTrait;
+    use EnumTrait,FindOrExceptionTrait;
 
     const DISTRIBUTOR_YES = 1,DISTRIBUTOR_NO = 0;
 
@@ -40,9 +41,9 @@ class FUser extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'username', 'password', 'phone', 'created_at', 'updated_at'], 'required'],
+            [['user_id', 'username', 'password', 'phone'], 'required'],
             [['phone', 'is_distributor', 'created_at', 'updated_at'], 'integer'],
-            [['total_prize'], 'number'],
+            [['total_prize','prize_now','prize_withdrawal'], 'number'],
             [['user_id', 'password', 'open_id'], 'string', 'max' => 255],
             [['username'], 'string', 'max' => 32],
             [['user_id'], 'unique'],

@@ -5,11 +5,6 @@ namespace frontend\components\rest;
 use Yii;
 use yii\db\ActiveQuery;
 
-/**
- * ARExpand class file.
- * @Author haoliang
- * @Date 16.05.2016 12:08
- */
 class ARExpand extends \yii\base\Object
 {
 

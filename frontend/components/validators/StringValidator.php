@@ -5,11 +5,6 @@ namespace frontend\components\validators;
 use Yii;
 use common\components\ValidateErrorCode;
 
-/**
- * StringValidator class file.
- * @Author haoliang
- * @Date 24.02.2016 10:24
- */
 class StringValidator extends \yii\validators\StringValidator
 {
 

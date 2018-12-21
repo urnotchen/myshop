@@ -6,10 +6,7 @@ use Yii;
 use frontend\modules\v1\models\forms\AccessTokenForm;
 
 /**
- * AccessTokenLogin class file.
- * @Author haoliang
- * @Date 11.01.2016 18:34
- *
+
  * 貌似并未使用
  */
 class AccessTokenLogin extends \yii\base\ActionFilter

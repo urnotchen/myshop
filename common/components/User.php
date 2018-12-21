@@ -6,11 +6,7 @@
 //use commmon\models\User as UserModel;
 //use yii\web\IdentityInterface;
 //
-///**
-// * User class file.
-// * @Author haoliang
-// * @Date 06.09.2015 19:14
-// */
+
 //class User extends \yii\web\User
 //{
 //
