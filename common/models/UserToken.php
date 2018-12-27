@@ -53,7 +53,7 @@ class UserToken extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['open_id', 'access_token','registration_id'], 'string'],
+            [['open_id', 'access_token','registration_id','refresh_token'], 'string'],
             [['user_id', 'platform', 'expired_at'], 'integer'],
 
             ['open_id', 'required', 'on' => self::SCENARIO_LOGIN_THIRD_PARTY],
@@ -71,7 +71,7 @@ class UserToken extends \yii\db\ActiveRecord
             self::SCENARIO_LOGIN_EMAIL =>
                 ['user_id', 'expired_at','registration_id', 'access_token', 'platform'],
             self::SCENARIO_LOGIN_THIRD_PARTY =>
-                ['user_id', 'expired_at','registration_id', 'access_token', 'platform', 'open_id']
+                ['user_id', 'expired_at', 'access_token',  'open_id','refresh_token']
         ];
     }
 

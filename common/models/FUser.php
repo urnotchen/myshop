@@ -41,14 +41,13 @@ class FUser extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'username', 'password', 'phone'], 'required'],
-            [['phone', 'is_distributor', 'created_at', 'updated_at'], 'integer'],
+//            [[ 'username', 'password', 'phone'], 'required'],
+            [['phone', 'is_distributor','sex' ,'created_at', 'updated_at'], 'integer'],
             [['total_prize','prize_now','prize_withdrawal'], 'number'],
-            [['user_id', 'password', 'open_id'], 'string', 'max' => 255],
+            [['password', 'image','open_id','province','city'], 'string', 'max' => 255],
             [['username'], 'string', 'max' => 32],
-            [['user_id'], 'unique'],
             [['username'], 'unique'],
-            [['phone'], 'unique'],
+//            [['phone'], 'unique'],
         ];
     }
 
@@ -59,7 +58,6 @@ class FUser extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'user_id' => 'User ID',
             'username' => 'Username',
             'password' => 'Password',
             'phone' => 'Phone',

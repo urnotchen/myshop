@@ -5,6 +5,36 @@ namespace frontend\modules\v1\models;
 class Goods extends \frontend\models\Goods{
 
 
+    public function fields()
+    {
+        return [
+            'id',
+            'goods_id',
+            'name',
+            'content',
+            'distributor_prize',
+            'sales_initial',
+            'sales_actual',
+            'goods_status',
+            'sales_status',
+            'sales_begin',
+            'sales_end',
+            'stock_num',
+            'sales_num',
+            'image_url',
+            'max_num',
+            'sales_begin',
+            'sales_end',
+        ];
+    }
+
+    public function extraFields()
+    {
+        return [
+            'store'
+        ];
+    }
+
     /*
      * 用户下订单后减少库存
      * */

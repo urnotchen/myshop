@@ -1,6 +1,7 @@
 <?php
 
 namespace frontend\models;
+use common\helpers\NumHelper;
 use frontend\models\FUser as User;
 
 class UserToken extends \common\models\UserToken
@@ -37,18 +38,27 @@ class UserToken extends \common\models\UserToken
         }
     }
 
-    public function checkAlive()
-    {
-        if ($this->isExpired()) {
 
-            throw new \yii\web\HttpException(403,
-                'access_token has been expired',
-                \common\components\ResponseCode::ACCESS_TOKEN_EXPIRED
-            );
+    public static function updateToken($user_id,$open_id,$access_token,$expired_time,$refresh_token){
+
+        $model = self::findOne(['user_id' => $user_id]);
+        if(!$model) {
+            $model = new self();
+            $model->open_id = $open_id;
+            $model->user_id = $user_id;
         }
+        $model->scenario = self::SCENARIO_LOGIN_THIRD_PARTY;
+        $model->setAttributes([
+            'access_token' => $access_token,
+            'expired_at' => $expired_time + time(),
+            'refresh_token' => $refresh_token,
+        ]);
+//            var_dump($model);
+         $model->save();
 
-        return true;
     }
+
+
 }
 
 ?>
