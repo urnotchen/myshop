@@ -65,7 +65,33 @@ class WxController extends Controller{
 
     public function actionIndex(){
 
-        return $this->render('index');
+//        return $this->render('index',[
+//            'app_id' => "sss",
+////            'jsApiList' => json_encode(['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone']),
+//        ]);
+
+        //获取基本access_token签名
+        $access_token = Curl::httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".self::APP_ID."&secret=".self::APP_SECRET,true);
+        $access_token = json_decode($access_token,true);
+        $res = Curl::httpGet("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token={$access_token['access_token']}&type=jsapi",true);
+        $ticket = json_decode($res,true);
+
+        $noncestr = 'Wm3WZYTPz0wzccnW';
+        $jsapi_ticket = $ticket['ticket'];
+        $timestamp = time();
+        $url = 'http://39.108.230.44/';
+
+        $str = "jsapi_ticket={$jsapi_ticket}&noncestr={$noncestr}&timestamp={$timestamp}&url={$url}";
+        $str_sha1 = sha1($str);
+
+        return $this->render('index',[
+            'app_id' => self::APP_ID,
+            'timestamp' => $timestamp,
+            'nonceStr' => $noncestr,
+            'signature' => $str_sha1,
+            'jsapi_ticket' => $jsapi_ticket,
+//            'jsApiList' => json_encode(['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone']),
+        ]);
     }
 }
 ?>
