@@ -1,7 +1,13 @@
 
 
 <button id="share"></button>
-
+<form>
+    <input type="hidden" id="app_id" value=<?php echo $app_id?> />
+    <input type="hidden" id="timestamp" value=<?php echo $timestamp?> />
+    <input type="hidden" id="nonceStr" value=<?php echo $nonceStr?> />
+    <input type="hidden" id="signature" value=<?php echo $signature?> />
+    <input type="hidden" id="jsapi_ticket" value=<?php echo $jsapi_ticket?> />
+</form>
 <?php
 
 
