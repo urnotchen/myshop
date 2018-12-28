@@ -29,23 +29,24 @@ console.log(location.href.split('#')[0]);
     wx.ready(function () {      //需在用户可能点击分享按钮前就先调用
     wx.updateTimelineShareData({ 
         title: '分享abc', // 分享标题
-        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: '', // 分享图标
+        link: 'http://39.108.230.44/iii.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: 'http://mmbiz.qpic.cn/mmbiz_jpg/qCbSKFcQyqJ1PcvFlAvIYGib1RvoEEbaESyAV3ibseWrsOjoBoxOdeScNwz0QcAgWD12HSeFV5VT6vovibmCunKLw/0', // 分享图标
         success: function () {
           // 设置成功
+          console.log('设置成功123');
         }
 });});
     
 $("#share").on('click',share);
 function share(){
-    alert(123);
-   wx.scanQRCode({
-needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-scanType: ["qrCode","barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-success: function (res) {
-var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-}
-});
+ wx.updateAppMessageShareData({ 
+        title: '你好分享', // 分享标题
+        desc: '测试分享描述', // 分享描述
+        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: '', // 分享图标
+        success: function () {
+          // 设置成功
+        }});
 }
 JS
 );
