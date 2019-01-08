@@ -34,7 +34,7 @@ class WxController extends Controller{
 
         $output = Curl::httpGet('https://api.weixin.qq.com/sns/oauth2/access_token?appid='.self::APP_ID.'&secret='.self::APP_SECRET.'&code='.$code.'&grant_type=authorization_code',true);
         $json = json_decode($output,true);
-        
+        var_dump($output);die;
         //拉取下用户信息
         $userinfo = Curl::httpGet("https://api.weixin.qq.com/sns/userinfo?access_token={$json['access_token']}&openid={$json['openid']}&lang=zh_CN",true);
         //保存token
@@ -50,12 +50,12 @@ class WxController extends Controller{
 //            var_dump($user);
 //            die;
             UserToken::updateToken($user->id, $json['openid'], $json['access_token'], $json['expires_in'], $json['refresh_token']);
+            $transaction->commit();
         }catch (\Exception $e) {
             var_dump($e->getMessage());
             $transaction->rollback();
 //            throw new HttpException(403,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
         }
-        $transaction->commit();
         //返回open_id,直接跳转到首页
         $this->redirect(['goods/index','token' => $json['openid']]);
     }
