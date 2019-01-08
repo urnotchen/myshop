@@ -27,7 +27,7 @@ class GoodsController extends Controller
 //            'tokenParam' => 'token'  //例如改为‘token’
 //        ];
         $inherit['authenticator']['only'] = [
-//            'index',
+            'index',
                 'view',
         ];
         $inherit['authenticator']['authMethods'] = [
@@ -48,7 +48,7 @@ class GoodsController extends Controller
         //查找token
         if(empty($params['token'])){
             //跳转去验证
-            return $this->redirect(['../../wx/premit-wx','redirect_uri' => APP_DOMAIN_SCHEMA.APP_FRONTEND_DOMAIN.APP_BASE_DOMAIN.'/wx/get-code']);
+//            return $this->redirect(['../../wx/premit-wx','redirect_uri' => APP_DOMAIN_SCHEMA.APP_FRONTEND_DOMAIN.APP_BASE_DOMAIN.'/wx/get-code']);
         }
         //判断是不是分销商,
         $user = Yii::$app->getUser();
