@@ -21,8 +21,9 @@ class UploadForm extends Model
     public function upload()
     {
         if ($this->validate()) {
-            $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
-            return true;
+            $name = 'uploads/' .time().rand(100,999). '.'. $this->file->extension;
+            $this->file->saveAs($name);
+            return $name;
         } else {
             return false;
         }

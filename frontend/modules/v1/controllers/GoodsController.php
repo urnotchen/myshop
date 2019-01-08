@@ -3,9 +3,12 @@
 namespace frontend\modules\v1\controllers;
 
 use frontend\components\rest\Controller;
+use frontend\modules\v1\components\QueryParamAuth;
+use frontend\modules\v1\models\FUser;
 use Yii;
 use frontend\modules\v1\models\Goods;
 use frontend\modules\v1\models\search\Goods as GoodsSearch;
+
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -19,11 +22,17 @@ class GoodsController extends Controller
     {
         $inherit = parent::behaviors();
 
+//        $behaviors['authenticator'] = [
+//            'class' => QueryParamAuth::className(),
+//            'tokenParam' => 'token'  //例如改为‘token’
+//        ];
         $inherit['authenticator']['only'] = [
-            'index','cancel-order'
+//            'index',
+                'view',
         ];
         $inherit['authenticator']['authMethods'] = [
-            \frontend\modules\v1\components\AccessTokenAuth::className(),
+//            \frontend\modules\v1\components\AccessTokenAuth::className(),
+            QueryParamAuth::className(),
         ];
 
         return $inherit;
@@ -34,10 +43,24 @@ class GoodsController extends Controller
      */
     public function actionIndex()
     {
+        //判断有没有token 有的话带上个人信息
+        $params = Yii::$app->request->get();
+        //查找token
+        if(empty($params['token'])){
+            //跳转去验证
+            return $this->redirect(['../../wx/premit-wx','redirect_uri' => APP_DOMAIN_SCHEMA.APP_FRONTEND_DOMAIN.APP_BASE_DOMAIN]);
+        }die;
+        //判断是不是分销商,
+        $user = Yii::$app->getUser();
+        $res = FUser::isDistributor($user->id);
+
+        //把所有的商品url带上token个人信息也就是openid
         $searchModel = new GoodsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $dataProvider;
+        return [
+            'list' => $dataProvider,
+            'is_distributor' => $res?FUser::DISTRIBUTOR_YES:FUser::DISTRIBUTOR_NO,
+        ];
     }
 
     /**
@@ -119,5 +142,34 @@ class GoodsController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionDetails($id){
+
+        return Goods::getGoodsDetails($id);
+    }
+
+    /*
+     * 获取商品售卖的实时信息
+     * */
+    public function getRealTimeInfo($id){
+
+        $model = Goods::findOneOrException(['goods_id' => $id]);
+        return [
+            'name' => $model->name,
+            'distributor_prize' => $model->distributor_prize,
+            'sales_initial' => $model->sales_initial,
+            'sales_actual' => $model->sales_actual,
+            'goods_status',
+            'sale_status',
+            'sales_begin',
+            'sales_end',
+            'stock_num',
+            'sales_num',
+            'image_url',
+            'max_num',
+            'sales_begin',
+            'sales_end',
+        ];
     }
 }

@@ -2,7 +2,7 @@
 /yii
 /yii_test
 /yii_test.bat
-
+/runtime
 # phpstorm project files
 .idea
 
@@ -33,3 +33,5 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+
+/frontend/.user.ini

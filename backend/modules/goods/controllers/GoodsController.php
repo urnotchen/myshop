@@ -181,14 +181,14 @@ class GoodsController extends Controller
         if (Yii::$app->request->isPost) {
             $model->file = UploadedFile::getInstance($model, 'file');
             if ($model->file && $model->validate()) {
-                $path = '/upload/';
+                $path = '/uploads/';
 //                if (!file_exists($path)) mkdir($path);
 
-                $filename = time() . '.' . $model->file->extension;
+                $res = $model->upload();
                 //todo 上传成功后传到七牛 删除本地文件 返回七牛url
-                if ($model->file->saveAs($path . $filename)){
+                if ($res){
 
-                    return ["result" => "Success", "url" => $path . $filename];
+                    return ["result" => "Success", "url" => $res];
 
                 }else
                     return ["result" => "Fail"];

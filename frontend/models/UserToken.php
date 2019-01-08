@@ -20,7 +20,7 @@ class UserToken extends \common\models\UserToken
         try {
 
             $model = static::traitFindOneOrException($where, $closure);
-            $model->checkAlive();
+//            $model->checkAlive();
 
             return $model;
 

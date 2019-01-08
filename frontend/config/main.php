@@ -68,6 +68,12 @@ return [
 
             ],
         ],
+        'wxAuthorization' => [
+            'class' => 'frontend\components\WxAuthorization',
+            'scope' => 'snsapi_userinfo',
+            'app_id' => 'wxb7ba89d49cdacf6b',
+            'app_secret' => '7f06ea2e6c9465b0d67a4d2855a756b1',
+        ],
     ],
     'modules' => [
         'v1' => [

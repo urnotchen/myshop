@@ -6,6 +6,7 @@ use common\helpers\Curl;
 use frontend\models\FUser;
 use frontend\models\UserToken;
 use yii\web\Controller;
+use Yii;
 
 class WxController extends Controller{
 
@@ -17,16 +18,16 @@ class WxController extends Controller{
     /*
      * 微信请求授权
      * */
-    public function actionPermmitWx(){
+    public function actionPremitWx($redirect_uri){
 
-        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.self::APP_ID.'&redirect_uri='.urlencode(self::REDIRECT_URI).'&response_type=code&scope='.self::SCOPE.'&state=STATE#wechat_redirect';
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.self::APP_ID.'&redirect_uri='.urlencode($redirect_uri).'&response_type=code&scope='.self::SCOPE.'&state=STATE#wechat_redirect';
 
-        $this->redirect($url);
+        return $this->redirect($url);
     }
 
     /*
      * 获取微信code
-     *http://39.108.230.44/index.php?code=021iwtz60a4S5E1xGRx60aS9z60iwtzl&state=123
+     *  http://39.108.230.44/index.php?code=021iwtz60a4S5E1xGRx60aS9z60iwtzl&state=123
      * */
 
     public function actionGetCode($code){
@@ -34,12 +35,6 @@ class WxController extends Controller{
         $output = Curl::httpGet('https://api.weixin.qq.com/sns/oauth2/access_token?appid='.self::APP_ID.'&secret='.self::APP_SECRET.'&code='.$code.'&grant_type=authorization_code',true);
         $json = json_decode($output,true);
         
-//        var_dump($json['access_token']);die;
-//        $json = new \stdClass();
-//        $json->access_token = "17_lr-TOIP_2cnec3eoEf7t29XN_yM80RLtH1lmTfBWYxwlFKlXFrwqQ2rY7u0xlJGpmzJD0-gozZhcQl8Qp18FJA" ;
-//        $json->expires_in = 7200;
-//        $json->refresh_token = "17_JboOK99SOrizyGXt-9nuFY5ejWgZa2cCmfCHLC2FHMKzCGLRu5FqSp2_KKKVIbkabmqnkXzlNOKXqEE1c5dYzw" ;
-//        $json->openid = "oIzMq0imQsGjutk9w9951YzStyG0";
         //拉取下用户信息
         $userinfo = Curl::httpGet("https://api.weixin.qq.com/sns/userinfo?access_token={$json['access_token']}&openid={$json['openid']}&lang=zh_CN",true);
         //保存token
@@ -61,11 +56,11 @@ class WxController extends Controller{
 //            throw new HttpException(403,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
         }
         $transaction->commit();
+        //返回open_id,直接跳转到首页
+        $this->redirect(['goods/index','token' => $json['openid']]);
     }
 
     public function actionIndex(){
-
-
 
         //获取基本access_token签名
         $access_token = Curl::httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".self::APP_ID."&secret=".self::APP_SECRET,true);
@@ -77,7 +72,7 @@ class WxController extends Controller{
         $jsapi_ticket = $ticket['ticket'];
         $timestamp = time();
         $url = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"];
-      
+
         $str = "jsapi_ticket={$jsapi_ticket}&noncestr={$noncestr}&timestamp={$timestamp}&url={$url}";
         $str_sha1 = sha1($str);
         return $this->render('index',[
@@ -88,6 +83,12 @@ class WxController extends Controller{
             'jsapi_ticket' => $jsapi_ticket,
 //            'jsApiList' => json_encode(['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone']),
         ]);
+    }
+
+
+
+    public function actionTest(){
+        var_dump(\Yii::$app->getUser());
     }
 }
 ?>

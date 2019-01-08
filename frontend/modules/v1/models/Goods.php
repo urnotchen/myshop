@@ -16,7 +16,7 @@ class Goods extends \frontend\models\Goods{
             'sales_initial',
             'sales_actual',
             'goods_status',
-            'sales_status',
+            'sale_status',
             'sales_begin',
             'sales_end',
             'stock_num',
@@ -33,6 +33,14 @@ class Goods extends \frontend\models\Goods{
         return [
             'store'
         ];
+    }
+
+    public static function getGoodsDetails($id){
+
+        $model = self::findOneOrException(['goods_id' => $id]);
+        if($model){
+            return $model->content;
+        }
     }
 
     /*

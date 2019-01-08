@@ -1,0 +1,2861 @@
+2019-01-02 00:49:39 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access_token in D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php:23
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php(10): frontend\modules\v1\components\AccessTokenAuth->getAccessToken(Object(frontend\components\rest\Request), Object(frontend\components\rest\User))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): frontend\modules\v1\components\AccessTokenAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#13 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-01-02 00:49:39 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '5592d2f2-b21f-4cad-9241-d93b35a5c0e4'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51773'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546390179.619
+    'REQUEST_TIME' => 1546390179
+]
+2019-01-02 01:00:35 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access_token in D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php:23
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php(10): frontend\modules\v1\components\AccessTokenAuth->getAccessToken(Object(frontend\components\rest\Request), Object(frontend\components\rest\User))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): frontend\modules\v1\components\AccessTokenAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#13 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-01-02 01:00:35 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '26209e10-422e-43d4-8b1d-35de58ba7892'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52785'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546390835.7996
+    'REQUEST_TIME' => 1546390835
+]
+2019-01-02 01:32:10 [127.0.0.1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Response content must not be an array. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Response.php:1057
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Response.php(337): yii\web\Response->prepare()
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Response->send()
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-01-02 01:32:09 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55991'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546392729.2229
+    'REQUEST_TIME' => 1546392729
+]
+2019-01-03 02:46:38 [127.0.0.1][-][lki55grvl98fns5pemudo3f2h1][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-01-03 02:46:38 [127.0.0.1][-][lki55grvl98fns5pemudo3f2h1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53042'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/upload/1544153343.gif'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546483598.8044
+    'REQUEST_TIME' => 1546483598
+]
+2019-01-03 02:46:46 [127.0.0.1][-][lki55grvl98fns5pemudo3f2h1][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-01-03 02:46:46 [127.0.0.1][-][lki55grvl98fns5pemudo3f2h1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'lki55grvl98fns5pemudo3f2h1'
+    '_csrf' => 'f54d3e7b10a768af25d2ea1d842202e3000677dfa4213cbb2b10f75447eb1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kVGITuKzjU8B9CX6OKAvBBc3e2TaMk_v\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=lki55grvl98fns5pemudo3f2h1; _csrf=f54d3e7b10a768af25d2ea1d842202e3000677dfa4213cbb2b10f75447eb1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kVGITuKzjU8B9CX6OKAvBBc3e2TaMk_v%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53042'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/upload/1544153343.gif'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546483605.9697
+    'REQUEST_TIME' => 1546483605
+]
+2019-01-03 07:08:44 [127.0.0.1][-][ll9kbkjiqb39ip7bj2f1gpvio6][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-01-03 07:08:44 [127.0.0.1][-][ll9kbkjiqb39ip7bj2f1gpvio6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Mobile Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64268'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details/undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499324.4574
+    'REQUEST_TIME' => 1546499324
+]
+2019-01-03 07:14:19 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:14:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64953'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499659.7126
+    'REQUEST_TIME' => 1546499659
+]
+2019-01-03 07:14:47 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:14:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65007'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499687.5991
+    'REQUEST_TIME' => 1546499687
+]
+2019-01-03 07:15:01 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:15:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65034'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499701.1199
+    'REQUEST_TIME' => 1546499701
+]
+2019-01-03 07:15:31 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:15:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65090'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499731.1656
+    'REQUEST_TIME' => 1546499731
+]
+2019-01-03 07:17:12 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\web\HttpException: required item not found. in D:\phpstudy\WWW\myshop\common\traits\FindOrExceptionTrait.php:26
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\models\Goods.php(40): common\models\Goods::findOneOrException(Array)
+#1 D:\phpstudy\WWW\myshop\frontend\modules\v1\controllers\GoodsController.php(127): frontend\modules\v1\models\Goods::getGoodsDetails('goods_id=cNdmSR...')
+#2 [internal function]: frontend\modules\v1\controllers\GoodsController->actionDetails('goods_id=cNdmSR...')
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#8 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#9 {main}
+2019-01-03 07:17:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65271'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499831.5774
+    'REQUEST_TIME' => 1546499831
+]
+2019-01-03 07:17:19 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:17:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65290'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499839.2268
+    'REQUEST_TIME' => 1546499839
+]
+2019-01-03 07:17:29 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:17:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65313'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499849.0164
+    'REQUEST_TIME' => 1546499849
+]
+2019-01-03 07:17:40 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:17:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'goods_id=cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65339'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499860.8631
+    'REQUEST_TIME' => 1546499860
+]
+2019-01-03 07:17:44 [127.0.0.1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('details', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/detail...', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-03 07:17:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'goods_id' => 'cNdmSRVpJVQR'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'll9kbkjiqb39ip7bj2f1gpvio6'
+    '_csrf' => 'df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"63UoJMJ-txnxhPidS1kIgCYWfVfDVlH_\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=ll9kbkjiqb39ip7bj2f1gpvio6; _csrf=df824c7ae744ce1466f275346d07ff84c440ce2f6416be909d7e3ba58114cf00a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2263UoJMJ-txnxhPidS1kIgCYWfVfDVlH_%22%3B%7D'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65366'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/details?goods_id=cNdmSRVpJVQR'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'goods_id=cNdmSRVpJVQR'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546499864.9293
+    'REQUEST_TIME' => 1546499864
+]
+2019-01-04 01:50:59 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access_token in D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php:23
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php(10): frontend\modules\v1\components\AccessTokenAuth->getAccessToken(Object(frontend\components\rest\Request), Object(frontend\components\rest\User))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): frontend\modules\v1\components\AccessTokenAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#13 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-01-04 01:50:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '06042c71-4125-4502-b086-fc935d6dc737'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58949'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566659.2404
+    'REQUEST_TIME' => 1546566659
+]
+2019-01-04 01:51:07 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access_token in D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php:23
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php(10): frontend\modules\v1\components\AccessTokenAuth->getAccessToken(Object(frontend\components\rest\Request), Object(frontend\components\rest\User))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): frontend\modules\v1\components\AccessTokenAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#13 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-01-04 01:51:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'token' => '124'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '4638329b-7231-4961-8bf2-a47d49fc7eae'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58949'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?token=124'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'token=124'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566667.0739
+    'REQUEST_TIME' => 1546566667
+]
+2019-01-04 01:51:13 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access_token in D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php:23
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\modules\v1\components\AccessTokenAuth.php(10): frontend\modules\v1\components\AccessTokenAuth->getAccessToken(Object(frontend\components\rest\Request), Object(frontend\components\rest\User))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): frontend\modules\v1\components\AccessTokenAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#5 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#13 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#14 {main}
+2019-01-04 01:51:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'access-token' => '124'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => 'dd5a47dd-ee08-40b5-baf3-5f74021bbe10'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58949'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?access-token=124'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=124'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566673.2912
+    'REQUEST_TIME' => 1546566673
+]
+2019-01-04 01:52:28 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access-token in D:\phpstudy\WWW\myshop\frontend\models\UserToken.php:30
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\traits\UserIdentityTrait.php(19): frontend\models\UserToken::findOneOrException(Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\User.php(298): frontend\models\FUser::findIdentityByAccessToken('1245', 'yii\\filters\\aut...')
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\QueryParamAuth.php(31): yii\web\User->loginByAccessToken('1245', 'yii\\filters\\aut...')
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): yii\filters\auth\QueryParamAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#7 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#14 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#15 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2019-01-04 01:52:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'access-token' => '1245'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '5017bd53-bcd5-4ab5-85ca-0152bfa66b9e'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58949'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?access-token=1245'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=1245'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566747.2144
+    'REQUEST_TIME' => 1546566747
+]
+2019-01-04 01:54:43 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#11 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-01-04 01:54:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'access-token' => '1245'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '0deba395-e77b-48c6-9d57-6c3edbfd12a0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59470'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?access-token=1245'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=1245'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566883.1502
+    'REQUEST_TIME' => 1546566883
+]
+2019-01-04 01:54:53 [127.0.0.1][-][-][error][yii\web\HttpException:403] yii\web\HttpException: invalid access-token in D:\phpstudy\WWW\myshop\frontend\models\UserToken.php:30
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\frontend\traits\UserIdentityTrait.php(19): frontend\models\UserToken::findOneOrException(Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\User.php(298): frontend\models\FUser::findIdentityByAccessToken('1245', 'frontend\\module...')
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\QueryParamAuth.php(31): yii\web\User->loginByAccessToken('1245', 'frontend\\module...')
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(73): yii\filters\auth\QueryParamAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(60): yii\filters\auth\CompositeAuth->authenticate(Object(frontend\components\rest\User), Object(frontend\components\rest\Request), Object(yii\web\Response))
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#7 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#14 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#15 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2019-01-04 01:54:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'token' => '1245'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => '84d99d7c-eaa9-4889-b42f-7aa652083a58'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59470'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?token=1245'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'token=1245'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546566892.4467
+    'REQUEST_TIME' => 1546566892
+]
+2019-01-08 00:51:59 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: frontend\models\search\GoodsSearch::status in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('status')
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('status')
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(frontend\models\search\GoodsSearch), Array)
+#3 D:\phpstudy\WWW\myshop\frontend\models\search\GoodsSearch.php(55): yii\base\Model->validate()
+#4 D:\phpstudy\WWW\myshop\frontend\controllers\GoodsController.php(40): frontend\models\search\GoodsSearch->search(Array)
+#5 [internal function]: frontend\controllers\GoodsController->actionIndex()
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('goods/index', Array)
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#11 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-01-08 00:51:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '49975'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/goods/index'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546908716.439
+    'REQUEST_TIME' => 1546908716
+]
+2019-01-08 00:53:16 [127.0.0.1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:93
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(76): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\filters\auth\CompositeAuth.php(57): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\auth\CompositeAuth->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(274): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#9 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/goods/index', Array)
+#10 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#11 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2019-01-08 00:53:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'tokenq' => '124'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '4nqjsbb8p00otccdj8hs0srou2'
+    '_csrf-frontend' => '924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"ER7xMmo12odL7J4th3E1WfPg1iSOWCH5\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'advanced-frontend=4nqjsbb8p00otccdj8hs0srou2; _csrf-frontend=924714717244f15c39ae72f3dde964efef3773f95942c0af195c95d74878ab18a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22ER7xMmo12odL7J4th3E1WfPg1iSOWCH5%22%3B%7D'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.1.1'
+    'HTTP_POSTMAN_TOKEN' => 'a212d02a-dde9-4533-a18c-5a9396438a58'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50021'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/index?tokenq=124'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'tokenq=124'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546908796.5556
+    'REQUEST_TIME' => 1546908796
+]
+2019-01-08 00:58:24 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Request.php:284
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+2019-01-08 00:58:24 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50134'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/goods/wx/premit-wx'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546909104.2028
+    'REQUEST_TIME' => 1546909104
+]
+2019-01-08 00:58:40 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/wx/premit-wx". in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('v1/wx/premit-wx', Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#2 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#1 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-01-08 00:58:40 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50151'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/wx/premit-wx'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546909120.2157
+    'REQUEST_TIME' => 1546909120
+]
+2019-01-08 00:58:58 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: redirect_uri in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('premit-wx', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wx/premit-wx', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-08 00:58:58 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50151'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/wx/premit-wx'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546909138.0807
+    'REQUEST_TIME' => 1546909138
+]
+2019-01-08 00:59:13 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: redirect_uri in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('premit-wx', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wx/premit-wx', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-08 00:59:13 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50151'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/wx/premit-wx'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546909153.4966
+    'REQUEST_TIME' => 1546909153
+]
+2019-01-08 01:33:24 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: redirect_uri in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('premit-wx', Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wx/premit-wx', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#5 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#6 {main}
+2019-01-08 01:33:24 [127.0.0.1][-][koc1ns6mhah5t4jdtd3prbfu86][info][application] $_GET = [
+    1 => [
+        'redirect_uri' => 'http://frontend.myshop.o'
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50347'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/wx/premit-wx?1%5Bredirect_uri%5D=http%3A%2F%2Ffrontend.myshop.o'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '1%5Bredirect_uri%5D=http%3A%2F%2Ffrontend.myshop.o'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546911204.5304
+    'REQUEST_TIME' => 1546911204
+]
+2019-01-08 01:35:28 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: frontend\components\WxAuthorization::scope in D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\BaseYii.php(546): yii\base\BaseObject->__set('scope', 'snsapi_userinfo')
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(frontend\components\WxAuthorization), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\di\Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('frontend\\compon...', Array, Array)
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('frontend\\compon...', Array, Array)
+#6 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#7 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(742): yii\di\ServiceLocator->get('wxAuthorization', true)
+#8 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\di\ServiceLocator.php(74): yii\base\Module->get('wxAuthorization')
+#9 D:\phpstudy\WWW\myshop\frontend\controllers\WxController.php(23): yii\di\ServiceLocator->__get('wxAuthorization')
+#10 [internal function]: frontend\controllers\WxController->actionPremitWx('http://frontend...')
+#11 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('premit-wx', Array)
+#14 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wx/premit-wx', Array)
+#15 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#16 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-01-08 01:35:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'redirect_uri' => 'http://frontend.myshop.o'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50359'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/wx/premit-wx?redirect_uri=http%3A%2F%2Ffrontend.myshop.o'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'redirect_uri=http%3A%2F%2Ffrontend.myshop.o'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546911328.7024
+    'REQUEST_TIME' => 1546911328
+]
+2019-01-08 01:39:31 [127.0.0.1][-][-][error][Error] Error: Cannot use object of type frontend\components\WxAuthorization as array in D:\phpstudy\WWW\myshop\frontend\controllers\WxController.php:23
+Stack trace:
+#0 [internal function]: frontend\controllers\WxController->actionPremitWx('http://frontend...')
+#1 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('premit-wx', Array)
+#4 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('wx/premit-wx', Array)
+#5 D:\phpstudy\WWW\myshop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(frontend\components\rest\Request))
+#6 D:\phpstudy\WWW\myshop\frontend\web\index.php(17): yii\base\Application->run()
+#7 {main}
+2019-01-08 01:39:31 [127.0.0.1][-][-][info][application] $_GET = [
+    'redirect_uri' => 'http://frontend.myshop.o'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'koc1ns6mhah5t4jdtd3prbfu86'
+    '_csrf' => '7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb\";}'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'USER-20171226GZ'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator.USER-20171226GZ'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Local'
+    'LOGONSERVER' => '\\\\USER-20171226GZ'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\phpstudy\\php70n;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\nodejs\\;D:\\Program Files (x86)\\python\\Scripts\\;D:\\Program Files (x86)\\python\\;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\Composer\\vendor\\bin;D:\\Program Files\\Git\\bin;D:\\Program Files (x86)\\Fiddler;C:\\Users\\Administrator.USER-20171226GZ\\AppData\\Roaming\\npm'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 42 Stepping 7, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '2a07'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1.USE\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'USER-20171226GZ'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator.USER-20171226GZ'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    '_DFX_INSTALL_UNSIGNED_DRIVER' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=koc1ns6mhah5t4jdtd3prbfu86; _csrf=7b96ce507afb244ea16f8747676873e84d1fa19fe81e790ab1d53167c112211ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EnxmCalMKWMmZP7YXSlCUBfFEDZCPULb%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'frontend.myshop.o'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/myshop/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'frontend.myshop.o'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50382'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.9'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW/myshop/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/wx/premit-wx?redirect_uri=http%3A%2F%2Ffrontend.myshop.o'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'redirect_uri=http%3A%2F%2Ffrontend.myshop.o'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1546911571.0035
+    'REQUEST_TIME' => 1546911571
+]
