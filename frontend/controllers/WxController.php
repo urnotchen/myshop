@@ -34,7 +34,7 @@ class WxController extends Controller{
 
         $output = Curl::httpGet('https://api.weixin.qq.com/sns/oauth2/access_token?appid='.self::APP_ID.'&secret='.self::APP_SECRET.'&code='.$code.'&grant_type=authorization_code',true);
         $json = json_decode($output,true);
-        var_dump($output);die;
+ //       var_dump($output);die;
         //拉取下用户信息
         $userinfo = Curl::httpGet("https://api.weixin.qq.com/sns/userinfo?access_token={$json['access_token']}&openid={$json['openid']}&lang=zh_CN",true);
         //保存token
