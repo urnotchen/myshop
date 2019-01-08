@@ -4,6 +4,7 @@ namespace frontend\models;
 use common\components\ResponseCode;
 use common\helpers\NumHelper;
 use frontend\models\FUser as User;
+use yii\db\Exception;
 use yii\web\HttpException;
 
 class UserToken extends \common\models\UserToken
@@ -57,7 +58,7 @@ class UserToken extends \common\models\UserToken
         ]);
 //            var_dump($model);
          if(!$model->save()){
-             throw new HttpException(500,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
+             throw new Exception(500,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
          }
 
     }

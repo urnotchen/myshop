@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use common\components\ResponseCode;
+use yii\db\Exception;
 use yii\web\HttpException;
 
 class FUser extends \common\models\FUser  implements \yii\web\IdentityInterface {
@@ -26,7 +27,7 @@ class FUser extends \common\models\FUser  implements \yii\web\IdentityInterface 
             ]);
         }
         if(!$model->save()){
-            throw new HttpException(500,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
+            throw new Exception(500,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
         }
         return $model;
     }
