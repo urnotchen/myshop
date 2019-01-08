@@ -1,8 +1,10 @@
 <?php
 
 namespace frontend\models;
+use common\components\ResponseCode;
 use common\helpers\NumHelper;
 use frontend\models\FUser as User;
+use yii\web\HttpException;
 
 class UserToken extends \common\models\UserToken
 {
@@ -54,7 +56,9 @@ class UserToken extends \common\models\UserToken
             'refresh_token' => $refresh_token,
         ]);
 //            var_dump($model);
-         $model->save();
+         if(!$model->save()){
+             throw new HttpException(500,'数据库错误',ResponseCode::DATABASE_SAVE_FAILED);
+         }
 
     }
 
