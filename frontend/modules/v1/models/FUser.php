@@ -14,7 +14,7 @@ class FUser extends \frontend\models\FUser {
      * */
     public static function isDistributor($user_id){
 
-        $res =  self::find()->where(['user_id' => $user_id])->one();
+        $res =  self::find()->where(['id' => $user_id])->one();
         if(!$res){
             return false;
         }else{
